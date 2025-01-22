@@ -1,3 +1,6 @@
+
+![wechat2](https://img.shields.io/badge/微信公众号-科妙知行-brightgreen?style=flat-square)
+
 ## 介绍
 
 一个使用 Cloudflare Pages 创建的 URL 缩短器
