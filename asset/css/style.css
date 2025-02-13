@@ -1,0 +1,256 @@
+:root {
+    --color-primary: #000000;
+    /* 主题色：黑色 */
+    --color-primary-dark: #333333;
+    /* 深黑色，用于 hover 状态等 */
+    --color-primary-alpha: #00000050;
+    /* 黑色 alpha 渐变 */
+
+    --body-color: #d1d5db;
+    /* 浅灰色字体 */
+    --body-bg: linear-gradient(135deg, #141414, #1f1f1f);
+    /* 黑色渐变背景 */
+
+    --border-color: #333333;
+    /* 深灰边框 */
+}
+
+body {
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: var(--body-color);
+    background: var(--body-bg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.3;
+    color: #fff;
+}
+
+main[x-cloak] {
+    opacity: 0;
+}
+
+main:not([x-cloak]) {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    /* 添加圆角 */
+    box-sizing: border-box;
+    color: #f1f5f9;
+    /* 浅灰色字体 */
+    background-color: #2d2d2d;
+    /* 深色背景 */
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0.25rem var(--color-primary-alpha);
+    border-color: var(--color-primary);
+    outline: 0;
+    background-color: #444444;
+    /* 聚焦时背景变浅 */
+}
+
+details {
+    margin: 1rem 0 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    /* 圆角 */
+    background-color: #333333;
+    transition: background 0.3s;
+}
+
+details[open] {
+    background: #444444;
+    /* 打开时背景色变亮 */
+}
+
+details summary {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0.8;
+    outline: 0;
+    color: #fff;
+}
+
+details div {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    color: #f1f5f9;
+}
+
+button {
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 0.5rem;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    cursor: pointer;
+    user-select: none;
+    transition: border 0.3s, background 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+    border-color: var(--color-primary-dark);
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    /* 按钮 hover 时轻微上浮 */
+}
+
+button:focus {
+    box-shadow: 0 0 0 0.25rem var(--color-primary-alpha);
+    border-color: var(--color-primary);
+    outline: 0;
+}
+
+button:disabled {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+footer {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    opacity: 0.6;
+    color: #ccc;
+    /* 浅灰色文字 */
+}
+
+footer i {
+    font-style: normal;
+    color: #ff8787;
+}
+
+.success,
+.error {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.success {
+    border: 1px solid #12b886;
+    background: #38d9a9;
+}
+
+.error {
+    border: 1px solid #fa5252;
+    background: #ff8787;
+}
+
+/* 动画：旋转 */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 基础容器样式 */
+.stat-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #f1f5f9;
+    font-size: 0.875rem;
+    padding: 1rem;
+}
+
+/* 每个统计项的样式 */
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 统计值的样式 */
+.stat-value {
+    font-weight: 500;
+    color: #38d9a9;
+    /* 绿色 */
+}
+
+/* 底部容器样式 */
+.footer {
+    text-align: center;
+    padding-top: 2.5rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 链接样式 */
+.footer-link {
+    color: #38d9a9;
+    font-weight: 700;
+}
+
+
+.qrcode {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+.sub-title {
+    color: red;
+}
