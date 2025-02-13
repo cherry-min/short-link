@@ -241,16 +241,24 @@ footer i {
     font-weight: 700;
 }
 
-
+/* QR Code 样式 */
 .qrcode {
     width: 200px;
     height: 200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: block;
-    border-radius: 10px;
+    border-radius: 0.5rem;
+    /* 为二维码添加圆角 */
+    background-color: #fff;
+    /* 背景颜色 */
 }
 
-
+/* Sub-title 样式 */
 .sub-title {
-    color: red;
+    font-size: 1.25rem;
+    color: #f1f5f9;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 1rem;
+    opacity: 0.8;
 }

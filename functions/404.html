@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>404 - Page Not Found</title>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 页面</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 30px;
-            text-align: center;
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #141414, #1f1f1f);
+        font-family: "Arial", sans-serif;
+        color: #fff;
+      }
+      .container {
+        text-align: center;
+      }
+      .error-code {
+        font-size: 10rem;
+        font-weight: 700;
+        margin: 0;
+        animation: fadeIn 1s ease-in-out;
+      }
+      .message {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        opacity: 0.7;
+      }
+      .home-link {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.5rem 1rem;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: background 0.3s;
+      }
+      .home-link:hover {
+        background: #333;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
         }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
+      }
     </style>
-</head>
-
-<body>
-    <h1>404 - Page Not Found</h1>
-    <p>Sorry, the page you are looking for does not exist.</p>
-    <p>Please check if you have entered the correct URL.</p>
-</body>
-
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-code">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          width="100"
+          height="100"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            stroke="#fff"
+            stroke-width="5"
+            fill="none"
+          />
+          <text
+            x="50%"
+            y="50%"
+            text-anchor="middle"
+            dy=".3em"
+            font-size="40"
+            fill="#fff"
+          >
+            404
+          </text>
+        </svg>
+      </div>
+      <div class="message">抱歉，您访问的页面不存在。</div>
+      <a href="https://s.yoyou.org" class="home-link">返回首页</a>
+    </div>
+  </body>
 </html>
