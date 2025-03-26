@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+    width: 100%;
+}
 :root {
     --color-primary: #000000;
     /* 主题色：黑色 */
@@ -252,13 +256,21 @@ footer i {
     background-color: #fff;
     /* 背景颜色 */
 }
-
 /* Sub-title 样式 */
+.main-title {
+    font-size: 1.5rem; /* 增大字体 */
+    color: #38d9a9; /* 使用绿色以突出显示 */
+    text-align: center;
+    font-weight: 400; /* 增加字体粗细 */
+    margin-top: 1.5rem; /* 增加顶部间距 */
+    opacity: 1; /* 提高透明度 */
+}
+
 .sub-title {
     font-size: 1.25rem;
     color: #f1f5f9;
     text-align: center;
     font-weight: 300;
-    margin-top: 1rem;
-    opacity: 0.8;
+    margin-top: 0.5rem; /* 减少顶部间距 */
+    opacity: 0.9; /* 提高透明度 */
 }
